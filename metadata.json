@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+  },
+  "name": "apt-cacher-ng",
+  "maintainer_email": "halcyonblue@gmail.com",
+  "attributes": {
+  },
+  "license": "All rights reserved",
+  "suggestions": {
+  },
+  "platforms": {
+  },
+  "maintainer": "ZeddWorks",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "version": "0.0.2",
+  "recommendations": {
+  },
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures apt-cacher-ng",
+  "providing": {
+  }
+}
