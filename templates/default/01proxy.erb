@@ -1,4 +1,8 @@
+<% if node[:apt][:proxy_url].empty? %>
 Acquire::http { Proxy "http://<%= @proxy_url %>"; }
+<% else %>
+Acquire::http { Proxy "http://<%= @node[:apt][:proxy_url] %>"; }
+<% end %>
 
 Acquire::HTTP::Proxy::volatile.debian.org "DIRECT";
 Acquire::HTTP::Proxy::bugs.debian.org "DIRECT";
