@@ -19,11 +19,14 @@
 
 package "apt-cacher-ng"
 
-if node[:apt][:proxy_url] != ""
-  template "/etc/apt/apt.conf.d/01proxy" do
-    source "01proxy.erb"
-    owner "root"
-    group "root"
-    mode 0644
-  end
+apt = Chef::DataBagItem.load("apps", "apt")
+
+template "/etc/apt/apt.conf.d/01proxy" do
+  source "01proxy.erb"
+  owner "root"
+  group "root"
+  mode 0644
+  variables({
+    :proxy_url => apt["proxy_url"],
+  })
 end
